@@ -1,4 +1,4 @@
-# Courses App
+# E-shop App
 
 This application was built with simple REST API and Django REST Framework.
 
@@ -38,4 +38,4 @@ Akmatbek uulu Beks
 -
 
 ## Heroku
-Heroku [link](https://neobis-task5-pwoakk.herokuapp.com/)
+Heroku [link]()
