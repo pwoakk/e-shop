@@ -2,12 +2,11 @@ from django.contrib.auth.views import LogoutView
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
-from apps.product.views import CategoryViewSet, ProductViewSet
+from apps.comment.views import CommentViewSet
+
 
 router = DefaultRouter()
-router.register(r'category', CategoryViewSet)
-router.register(r'product', ProductViewSet)
-print(router.urls)
+router.register(r'', CommentViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
