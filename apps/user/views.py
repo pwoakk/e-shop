@@ -16,7 +16,7 @@ class CustomUserRegisterViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet
 
 class UpdatePassword(views.APIView):
 
-    permission_classes = (permissions.IsAuthenticated)
+    permission_classes = (permissions.IsAuthenticated, )
 
     def get_object(self, queryset=None):
         return self.request.user
@@ -37,7 +37,7 @@ class UpdatePassword(views.APIView):
 
 class LogoutAPIView(generics.GenericAPIView):
     serializer_class = LogoutSerializer
-    permission_classes = (permissions.IsAuthenticated)
+    permission_classes = (permissions.IsAuthenticated, )
 
     def post(self, request):
         serializer = self.serializer_class(data=request.data)
