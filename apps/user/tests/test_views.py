@@ -27,7 +27,7 @@ class UpdatePasswordTest(APITestCase):
             {"email": "email@gmail.com", "password": "password"},
         )
         access_token = self.res.data['access']
-        self.client.credentials(HTTP_AUTHORIZATION="bearer "+access_token)
+        self.client.credentials(HTTP_AUTHORIZATION="bearer " + access_token)
         self.url = reverse("change_password")
 
     def test_invalid_old_password(self):
