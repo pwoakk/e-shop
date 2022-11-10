@@ -7,7 +7,6 @@ from apps.user.views import CustomUserRegisterViewSet, UpdatePassword
 
 router = DefaultRouter()
 router.register(r'register', CustomUserRegisterViewSet, basename='register')
-
 urlpatterns = [
     path('', include(router.urls)),
     path("login/", jwt_views.TokenObtainPairView.as_view(), name="token_obtain_pair"),

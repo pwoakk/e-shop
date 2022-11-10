@@ -11,8 +11,15 @@ class CustomUserRegisterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = '__all__'
-
+        fields = [
+            "id",
+            "first_name",
+            "last_name",
+            "email",
+            "password",
+            "check_password",
+            "phone",
+        ]
         extra_kwargs = {
             'first_name': {'required': True},
             'last_name': {'required': True},

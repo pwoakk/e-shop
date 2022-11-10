@@ -12,10 +12,10 @@ class CustomUser(AbstractUser):
 
     objects = CustomUserManager()
 
-    first_name = models.CharField(max_length=255, verbose_name="first_name")
-    last_name = models.CharField(max_length=255, verbose_name="last_name")
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
     phone = models.CharField(
-        max_length=255, verbose_name="phone", null=True, blank=True
+        max_length=255, null=True, blank=True
     )
 
     def __str__(self):

@@ -17,7 +17,7 @@ class TestOrderView(APITestCase):
             {"email": "email@gmail.com", "password": "password"},
         )
         access_token = self.res.data["access"]
-        self.client.credentials(HTTP_AUTHORIZATION="bearer " + access_token)
+        self.client.credentials(HTTP_AUTHORIZATION="Bearer " + access_token)
         cart = Cart.objects.create(user=self.user)
         self.url = reverse("cart")
 
